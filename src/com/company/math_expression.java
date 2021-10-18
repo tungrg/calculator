@@ -2,40 +2,38 @@ package com.company;
 
 public class math_expression {
     private
-    double first_number;
-    double second_number;
-    String expression;
-    public void set_number(double _1st, double _2nd, String _exp){
-        first_number = _1st;
-        second_number = _2nd;
-        expression = _exp;
+    double firstNumber;
+    double secondNumber;
+    String mathExpression;
+    public void set_number(double firstNum, double secondNum, String mathExp){
+        firstNumber = firstNum;
+        secondNumber = secondNum;
+        mathExpression = mathExp;
     }
-    double calculate(){
-        if (expression.equals("+"))
+    String calculate(){
+        if (mathExpression.equals("+"))
         {
-            return first_number + second_number;
+            return Double.toString(firstNumber + secondNumber);
         }
-        else if(expression.equals("-"))
+        else if(mathExpression.equals("-"))
         {
-            return first_number + second_number;
+            return Double.toString(firstNumber + secondNumber);
         }
-        else if (expression.equals("*") )
+        else if (mathExpression.equals("*") )
         {
-            return first_number * second_number;
+            return Double.toString(firstNumber * secondNumber);
         }
-        else if (expression.equals("/") && second_number !=0)
+        else if (mathExpression.equals("/") && secondNumber !=0)
         {
-            return first_number / second_number;
+            return Double.toString(firstNumber / secondNumber);
         }
-        else if (expression.equals("/") && second_number ==0)
+        else if (mathExpression.equals("/") && secondNumber == 0)
         {
-            System.out.println("Can't not divide 0!!!");
-            return Double.POSITIVE_INFINITY;
+            return "Can't not divide 0!!!";
         }
         else
         {
-            System.out.println("Can't not implement this!!!");
-            return Double.POSITIVE_INFINITY;
+            return "Can't not implement this!!!";
         }
     }
 }
